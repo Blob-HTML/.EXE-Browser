@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://i.postimg.cc/NG3mpyZQ/EXE.png">
+    <title>.EXE Browser</title>
+    <style>
+        * {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .header {
+            text-align: center;
+            color: rgb(45, 99, 161);
+            font-size: 1.9em;
+            margin-top: 75px;
+            margin-bottom: 0px;
+            text-shadow: rgb(46, 134, 235) 0px 0px 10px;
+        }
+
+        .search-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .search-bar {
+            border-radius: 10px;
+            height: 40px;
+            width: 90%;
+            max-width: 650px;
+            padding: 10px;
+            font-size: 1em;
+            border: 2px solid rgb(45, 99, 161);
+            background: rgba(255, 255, 255, 0.2);
+            color: rgb(112, 177, 253);
+            outline: none;
+            transition: 0.2s;
+        }
+
+        input::placeholder {
+            color: rgb(35, 129, 237);
+        }
+
+        input:focus {
+            background: rgb(193, 231, 255);
+            transition: 0.6s ease-in;
+            border-color: rgb(46, 134, 235);
+        }
+
+        #footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100vw;
+            height: 50px;
+            text-align: center;
+            font-size: 1.5vh;
+            margin: 0;
+            background-color: rgb(39, 88, 144);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            display: flex;
+            flex-direction: row;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        #footer-social {
+            position: absolute;
+            right: 1vw;
+            height: 7vh;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+
+        #logos {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            cursor: pointer;
+            transition: 0.2s ease-in-out;
+
+        }
+
+        #logo:hover {
+            box-shadow: 0 0 12px var(--accent);
+            transform: translateY(-5px);
+            background-color: rgba(15, 35, 60, 0.9);
+        }
+
+        #logos>* {
+            border: 2px solid #fff;
+            padding: 7px;
+            border-radius: 8px;
+        }
+
+        @keyframes icon-hover {
+            from {
+                top: 0px;
+            }
+
+            to {
+                top: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Welcome to .EXE</h1>
+    </div>
+
+    <div class="search-container">
+        <input type="text" class="search-bar"
+            placeholder="Enter Search Query...                                                                                                             🔍︎">
+    </div>
+
+
+    <div id="footer">
+        <div id="logos">
+            <a href="gyugyu">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#e3e3e3">
+                    <path
+                        d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z" />
+                </svg>
+            </a>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+                <path
+                    d="m370-80-16-128q-13-5-24.5-12T307-235l-119 50L78-375l103-78q-1-7-1-13.5v-27q0-6.5 1-13.5L78-585l110-190 119 50q11-8 23-15t24-12l16-128h220l16 128q13 5 24.5 12t22.5 15l119-50 110 190-103 78q1 7 1 13.5v27q0 6.5-2 13.5l103 78-110 190-118-50q-11 8-23 15t-24 12L590-80H370Zm70-80h79l14-106q31-8 57.5-23.5T639-327l99 41 39-68-86-65q5-14 7-29.5t2-31.5q0-16-2-31.5t-7-29.5l86-65-39-68-99 42q-22-23-48.5-38.5T533-694l-13-106h-79l-14 106q-31 8-57.5 23.5T321-633l-99-41-39 68 86 64q-5 15-7 30t-2 32q0 16 2 31t7 30l-86 65 39 68 99-42q22 23 48.5 38.5T427-266l13 106Zm42-180q58 0 99-41t41-99q0-58-41-99t-99-41q-59 0-99.5 41T342-480q0 58 40.5 99t99.5 41Zm-2-140Z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+                <path
+                    d="M182-200q-51 0-79-35.5T82-322l42-300q9-60 53.5-99T282-760h396q60 0 104.5 39t53.5 99l42 300q7 51-21 86.5T778-200q-21 0-39-7.5T706-230l-90-90H344l-90 90q-15 15-33 22.5t-39 7.5Zm16-86 114-114h336l114 114q2 2 16 6 11 0 17.5-6.5T800-304l-44-308q-4-29-26-48.5T678-680H282q-30 0-52 19.5T204-612l-44 308q-2 11 4.5 17.5T182-280q2 0 16-6Zm482-154q17 0 28.5-11.5T720-480q0-17-11.5-28.5T680-520q-17 0-28.5 11.5T640-480q0 17 11.5 28.5T680-440Zm-80-120q17 0 28.5-11.5T640-600q0-17-11.5-28.5T600-640q-17 0-28.5 11.5T560-600q0 17 11.5 28.5T600-560ZM310-440h60v-70h70v-60h-70v-70h-60v70h-70v60h70v70Zm170-40Z" />
+            </svg>
+        </div>
+
+</body>
+
+</html>
